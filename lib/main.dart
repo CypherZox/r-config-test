@@ -51,7 +51,7 @@ class WelcomeWidget extends StatelessWidget {
               // Using default duration to force fetching from remote server.
               await remoteConfig.setConfigSettings(RemoteConfigSettings(
                   fetchTimeout: Duration(seconds: 0),
-                  minimumFetchInterval: Duration(seconds: 0)));
+                  minimumFetchInterval: Duration(seconds: 1)));
               await remoteConfig.fetchAndActivate();
             } catch (exception) {
               print(
